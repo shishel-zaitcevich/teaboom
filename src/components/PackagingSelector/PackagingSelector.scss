@@ -1,0 +1,49 @@
+@use '../../styles/abstracts/variables' as v;
+@use '../../styles/abstracts/mixins' as m;
+
+.packaging-selector {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.packaging-selector__title {
+  padding: 0;
+  margin: 0 0 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: v.$color-text;
+}
+
+.packaging-selector__options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.packaging-selector__option {
+  @include m.focus-ring;
+
+  padding: 10px 16px;
+  font: inherit;
+  font-size: 14px;
+  color: v.$color-text;
+  cursor: pointer;
+  background-color: v.$color-surface;
+  border: 1px solid v.$color-border;
+  border-radius: v.$radius-pill;
+  transition:
+    border-color v.$transition-fast,
+    color v.$transition-fast,
+    background-color v.$transition-fast;
+
+  &:hover {
+    border-color: v.$color-primary;
+  }
+
+  &--active {
+    color: v.$color-text-inverse;
+    background-color: v.$color-primary;
+    border-color: v.$color-primary;
+  }
+}

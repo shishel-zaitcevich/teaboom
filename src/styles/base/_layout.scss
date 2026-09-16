@@ -1,0 +1,13 @@
+@use '../abstracts/variables' as v;
+
+.page {
+  min-height: 100vh;
+  padding: 20px 0 60px;
+}
+
+.container {
+  width: 100%;
+  max-width: v.$container-max-width;
+  padding: 0 v.$container-padding;
+  margin: 0 auto;
+}

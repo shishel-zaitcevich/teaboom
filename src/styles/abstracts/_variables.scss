@@ -1,0 +1,42 @@
+$color-primary: #2f5d3a;
+$color-primary-dark: #234529;
+$color-accent: #c94f3e; // акцент для скидки/старой цены
+
+$color-text: #262420;
+$color-text-muted: #7a736a;
+$color-text-inverse: #ffffff;
+
+$color-bg: #ffffff;
+$color-surface: #ffffff;
+$color-surface-muted: #f4efe8;
+$color-border: #e6e0d6;
+
+$color-price: #262420;
+$color-price-old: #a39c8f;
+
+// Типографика
+$font-family-base: 'PT Sans', 'Helvetica Neue', Arial, sans-serif;
+$font-family-heading: 'PT Serif', Georgia, 'Times New Roman', serif;
+
+// Скругления
+$radius-sm: 6px;
+$radius-md: 10px;
+$radius-lg: 16px;
+$radius-pill: 999px;
+
+// Тени
+$shadow-sm: 0 1px 2px rgba(38, 36, 32, 0.06);
+$shadow-md: 0 8px 24px rgba(38, 36, 32, 0.08);
+
+// Переходы
+$transition-fast: 0.15s ease;
+$transition-slow: 0.4s ease;
+
+// Контейнер
+$container-max-width: 1200px;
+$container-padding: 24px;
+
+// Breakpoints
+$bp-mobile: 375px;
+$bp-tablet: 768px;
+$bp-desktop: 1440px;

@@ -1,0 +1,43 @@
+@use '../../styles/abstracts/variables' as v;
+@use '../../styles/abstracts/mixins' as m;
+
+.add-to-cart-button {
+  @include m.focus-ring;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 16px 24px;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  color: v.$color-text-inverse;
+  cursor: pointer;
+  background-color: v.$color-primary;
+  border: none;
+  border-radius: v.$radius-pill;
+  box-shadow: v.$shadow-sm;
+  transition:
+    background-color v.$transition-fast,
+    transform v.$transition-fast,
+    box-shadow v.$transition-fast;
+
+  @include m.respond(tablet) {
+    width: auto;
+    min-width: 220px;
+  }
+
+  &:hover {
+    background-color: v.$color-primary-dark;
+    box-shadow: v.$shadow-md;
+  }
+
+  &:active {
+    transform: translateY(1px) scale(0.99);
+  }
+
+  &--added {
+    background-color: #3a7a4a;
+  }
+}

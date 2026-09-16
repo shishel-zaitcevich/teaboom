@@ -1,0 +1,112 @@
+@use '../../styles/abstracts/variables' as v;
+@use '../../styles/abstracts/mixins' as m;
+
+.product-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  padding: 16px;
+  background-color: v.$color-surface;
+  border-radius: v.$radius-lg;
+
+  @include m.respond(tablet) {
+    padding: 24px;
+  }
+
+  @include m.respond(desktop) {
+    grid-template-columns: minmax(0, 480px) minmax(0, 1fr);
+    grid-template-areas:
+      'media    content'
+      'description description';
+    align-items: start;
+    padding: 40px;
+  }
+}
+
+.product-card__media {
+  @include m.respond(desktop) {
+    grid-area: media;
+    position: sticky;
+    top: 24px;
+  }
+}
+
+.product-card__content {
+  @include m.respond(desktop) {
+    grid-area: content;
+  }
+}
+
+.product-card__category {
+  margin: 0 0 6px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: v.$color-primary;
+  text-transform: uppercase;
+}
+
+.product-card__title {
+  margin: 0 0 16px;
+  font-family: v.$font-family-heading;
+  font-size: 28px;
+  line-height: 1.2;
+  color: v.$color-text;
+
+  @include m.respond(tablet) {
+    font-size: 32px;
+  }
+}
+
+.product-card__price-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.product-card__price {
+  font-size: 28px;
+  font-weight: 700;
+  color: v.$color-price;
+}
+
+.product-card__old-price {
+  font-size: 18px;
+  color: v.$color-price-old;
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+}
+
+.product-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  margin: 0 0 20px;
+  font-size: 13px;
+  color: v.$color-text-muted;
+}
+
+.product-card__availability {
+  &::before {
+    content: '·';
+    margin-right: 10px;
+    color: v.$color-border;
+  }
+}
+
+.product-card__packaging {
+  margin-bottom: 24px;
+}
+
+.product-card__cart {
+  margin-bottom: 4px;
+}
+
+.product-card__description {
+  @include m.respond(desktop) {
+    grid-area: description;
+    margin-top: 8px;
+  }
+}
