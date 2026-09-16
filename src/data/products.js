@@ -31,7 +31,7 @@ export const products = [
     breadcrumbs: ['Каталог', 'Улун', 'Ароматизированный улун'],
     images: [
       {
-        src: 'https://media.teaboom.ru/images/e4bb1618-fb80-41e2-8758-86f884ce095d.800x800.jpg',
+        src: '/images/products/image.png',
         alt: 'Ананасовый улун — рассыпной чай',
       },
     ],
