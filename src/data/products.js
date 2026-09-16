@@ -31,7 +31,7 @@ export const products = [
     breadcrumbs: ['Каталог', 'Улун', 'Ароматизированный улун'],
     images: [
       {
-        src: '/images/products/image.png',
+        src: '/products/image.png',
         alt: 'Ананасовый улун — рассыпной чай',
       },
     ],
